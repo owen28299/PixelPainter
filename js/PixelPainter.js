@@ -1,31 +1,39 @@
-//function that accepts clicks
+function makeCanvas(r, c){
+  var rows = r;
+  var columns = c;
+  var colorArr = ["#000000", "#ffffff", "#ff0000", "#0000ff", "#009900", "#ffff00", "#ff6600", "#6600cc"];
 
-var color;
+  function genCanvas(){
+    for (var i = 0; i < rows; i++){
+      var row = document.createElement('tr');
+      row.id = i;
+      document.getElementById("beerPong").appendChild(row);
 
+      for(var j = 0; j < columns; j++){
+        var col = document.createElement('td');
+        col.className ="cell";
+        document.getElementById(i).appendChild(col);
+      }
+    }
+  }
 
-var cells = document.querySelectorAll(".cell");
+  function genColors(){
+    for(var i in colorArr){
+      var col= document.createElement('td');
+      col.id = colorArr[i];
+      col.style.background= colorArr[i];
+      document.getElementById('colors').appendChild(col);
 
+    }
+  }
 
-document.getElementById('colors').addEventListener('click', function(event){
-  color= event.target.id;
-});
+  return{
+    genCanvas : genCanvas,
+    genColors : genColors
+  };
 
-
-
-
-
-var arr = [];
-
-for (var i in cells){
-  arr.push(cells[i]);
 }
 
-Array.prototype.forEach.call(cells, function(el, index){
-  el.addEventListener("click", function(event){
-    this.style.background = color;
-  });
-});
-
-
-
-//function that assigns colors
+var myCanvas = makeCanvas(30,30);
+myCanvas.genCanvas();
+myCanvas.genColors();
