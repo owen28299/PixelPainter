@@ -34,6 +34,6 @@ function makeCanvas(r, c){
 
 }
 
-var myCanvas = makeCanvas(30,30);
+var myCanvas = makeCanvas(60, 60);
 myCanvas.genCanvas();
 myCanvas.genColors();
