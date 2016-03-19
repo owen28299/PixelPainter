@@ -12,6 +12,7 @@ function makeCanvas(r, c){
       for(var j = 0; j < columns; j++){
         var col = document.createElement('td');
         col.className ="cell";
+        col.id = JSON.stringify([j,i]);
         document.getElementById(i).appendChild(col);
       }
     }
@@ -34,6 +35,6 @@ function makeCanvas(r, c){
 
 }
 
-var myCanvas = makeCanvas(60, 60);
+var myCanvas = makeCanvas(100, 100);
 myCanvas.genCanvas();
 myCanvas.genColors();
