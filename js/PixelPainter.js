@@ -1,7 +1,18 @@
 //function that accepts clicks
 
+var color;
+
 
 var cells = document.querySelectorAll(".cell");
+
+
+document.getElementById('colors').addEventListener('click', function(event){
+  color= event.target.id;
+});
+
+
+
+
 
 var arr = [];
 
@@ -11,7 +22,7 @@ for (var i in cells){
 
 Array.prototype.forEach.call(cells, function(el, index){
   el.addEventListener("click", function(event){
-    this.innerHTML = "X";
+    this.style.background = color;
   });
 });
 
