@@ -5,7 +5,7 @@ document.getElementById("beerPong").addEventListener("click", function(event){
 
   //turn this into a bunch of switches
   if(penType === "plus"){
-
+    console.log("plus");
     drawPlus(event.target.id);
   }
 

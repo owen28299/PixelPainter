@@ -1,6 +1,6 @@
 var color;
 var mouseIsDown = false;
-var penType = "basic";
+var penType = "normal";
 
 function clearCanvas() {
   var allCanvas  = document.querySelectorAll(".cell");
@@ -43,6 +43,6 @@ document.getElementById("plus").addEventListener("click", function(event){
 });
 
 //basic button
-document.getElementById("basic").addEventListener("click", function(event){
-  penType = "basic";
+document.getElementById("normal").addEventListener("click", function(event){
+  penType = "normal";
 });

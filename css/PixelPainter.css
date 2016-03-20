@@ -1,20 +1,60 @@
+body {
+	background
+}
+
 table {
   border: 1px;
 }
 
+
 #colors td {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
 }
 
+
 #beerPong {
-  border-collapse: collapse;
-  box-sizing: border-box;
-  width: 500px;
   height: 500px;
+  width: 500px;
+  box-sizing: border-box;
+  border-collapse: collapse;
 }
+
+.button{
+	position:relative;
+	color:#FFF;
+	display:inline-block;
+	justify-content: center;
+	text-decoration:none;
+	margin: 0 auto;
+	border-radius:5px;
+	border:solid 1px #D94E3B;
+	background:#cb3b27;
+	padding: 5px;
+
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+
+	-webkit-box-shadow: 0px 9px 0px #84261a;
+	-moz-box-shadow: 0px 9px 0px #84261a;
+	box-shadow: 0px 5px 0px #84261a;
+}
+
+.button:active{
+  -webkit-box-shadow: 0px 2px 0px #84261a;
+  -moz-box-shadow: 0px 2px 0px #84261a;
+  box-shadow: 0px 2px 0px #84261a;
+  position:relative;
+  top:7px;
+}
+
 
 #border_main {
   border: solid black 2px;
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
