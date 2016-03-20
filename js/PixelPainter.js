@@ -1,7 +1,7 @@
 function makeCanvas(r, c){
   var rows = r;
   var columns = c;
-  var colorArr = ["#000000", "#ffffff", "#ff0000", "#0000ff", "#009900", "#ffff00", "#ff6600", "#6600cc"];
+  var colorArr = ["#000000", "#ffffff", "#ff0000", "#0000ff", "#009900", "#ffff00", "#ff6600", "#6600cc", ];
 
   function genCanvas(){
     for (var i = 0; i <= rows; i++){
