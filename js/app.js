@@ -10,6 +10,7 @@ function clearCanvas() {
     el.style.background = "white";
   });
 
+  clicks = [0, "", ""];
 }
 
 //start with a blank canvas
@@ -51,4 +52,9 @@ document.getElementById("normal").addEventListener("click", function(event){
 //line button
 document.getElementById("line").addEventListener("click", function(event){
   penType = "line";
+});
+
+//square button
+document.getElementById("square").addEventListener("click", function(event){
+  penType = "square";
 });

@@ -5,33 +5,44 @@ document.getElementById("beerPong").addEventListener("click", function(event){
 
     switch(penType){
       case("normal"):
+        clicks = [0, "", ""];
         event.target.style.background = color;
         break;
       case("plus"):
+        clicks = [0, "", ""];
         drawPlus(event.target.id);
         break;
       case("line"):
 
-        event.target.style.background = color;
-        console.log('event.target.id', event.target.id);
-
         if(clicks[0] === 0){
+          event.target.style.background = color;
           clicks[1] = event.target.id;
           clicks[0] ++;
-          console.log(clicks);
-
         }
+
         else if(clicks[0] === 1){
           clicks[2] = event.target.id;
           clicks[0] ++;
 
-          console.log(clicks);
           drawLine(clicks[1], clicks[2]);
           clicks = [0, "", ""];
+        }
+        break;
+      case("square"):
 
-          console.log(clicks);
+        if(clicks[0] === 0){
+          event.target.style.background = color;
+          clicks[1] = event.target.id;
+          clicks[0] ++;
         }
 
+        else if(clicks[0] === 1){
+          clicks[2] = event.target.id;
+          clicks[0] ++;
+
+          drawSquare(clicks[1], clicks[2]);
+          clicks = [0, "", ""];
+        }
         break;
     }
   }
