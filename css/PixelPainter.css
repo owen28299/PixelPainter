@@ -1,5 +1,5 @@
 body {
-	background
+
 }
 
 table {
@@ -19,6 +19,7 @@ table {
   width: 500px;
   box-sizing: border-box;
   border-collapse: collapse;
+  user-select: none;
 }
 
 .button{
