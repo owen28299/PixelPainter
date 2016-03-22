@@ -61,9 +61,9 @@ input{
 	-moz-transition: all 0.1s;
 	transition: all 0.1s;
 
-	-webkit-box-shadow: 0px 9px 0px #84261a;
-	-moz-box-shadow: 0px 9px 0px #84261a;
-	box-shadow: 0px 5px 0px #84261a;
+	-webkit-box-shadow: 0px 4px 0px #84261a;
+	-moz-box-shadow: 0px 4px 0px #84261a;
+	box-shadow: 0px 4px 0px #84261a;
 }
 
 .button:active{
