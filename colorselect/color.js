@@ -1,4 +1,5 @@
 //adding color picker
+
 var pickColor;
 
 function natsColor(){
