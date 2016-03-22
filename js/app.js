@@ -63,3 +63,6 @@ document.getElementById("curve").addEventListener("click", function(event){
   penType = "curve";
 });
 
+document.getElementById("circle").addEventListener("click", function(event){
+  penType = "circle";
+});

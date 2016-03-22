@@ -29,24 +29,19 @@ function drawCurve(coord1, coord2, coord3){
     return a * x * x + b * x + c;
   }
 
-  // function getX(y){
-  //   return ((-b + Math.sqrt(b * b - 4 * a * (c - y))) / 2 * a);
-  // }
-
   var start = Math.min(x1, x2, x3);
   var end = Math.max(x1, x2, x3);
 
   for (var x = start; x <= end; x++){
     var pointx = JSON.stringify([x, Math.round(getY(x))]);
-    document.getElementById(pointx).style.background = color;
+
+    if (document.getElementById(pointx)) {
+      document.getElementById(pointx).style.background = color;
+    }
   }
 
-  // for (var y = y1; y <= y2; y++){
-  //   console.log('y', y);
-  //   console.log('getX(y)', getX(y));
+  function getX(y){
 
-  //   var pointy = JSON.stringify([Math.round(getX(y)), y]);
-  //   document.getElementById(pointy).style.background = color;
-  // }
+  }
 
 }

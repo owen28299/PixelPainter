@@ -64,6 +64,22 @@ document.getElementById("beerPong").addEventListener("click", function(event){
           clicks = [0, "", "", ""];
         }
         break;
+      case("circle"):
+
+        if(clicks[0] === 0){
+          event.target.style.background = color;
+          clicks[1] = event.target.id;
+          clicks[0] ++;
+        }
+
+        else if(clicks[0] === 1){
+          clicks[2] = event.target.id;
+          clicks[0] ++;
+
+          drawCircle(clicks[1], clicks[2]);
+          clicks = [0, "", "", ""];
+        }
+        break;
     }
   }
 
