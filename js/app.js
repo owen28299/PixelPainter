@@ -1,7 +1,7 @@
 var color;
 var mouseIsDown = false;
 var penType = "normal";
-var clicks = [0,"",""];
+var clicks = [0,"","", ""];
 
 function clearCanvas() {
   var allCanvas  = document.querySelectorAll(".cell");
@@ -10,6 +10,7 @@ function clearCanvas() {
     el.style.background = "white";
   });
 
+  clicks = [0, "", "", ""];
 }
 
 //start with a blank canvas
@@ -53,4 +54,21 @@ document.getElementById("normal").addEventListener("click", function(event){
 //line button
 document.getElementById("line").addEventListener("click", function(event){
   penType = "line";
+});
+
+//square button
+document.getElementById("square").addEventListener("click", function(event){
+  penType = "square";
+});
+
+document.getElementById("curve").addEventListener("click", function(event){
+  penType = "curve";
+});
+
+document.getElementById("hcurve").addEventListener("click", function(event){
+  penType = "hcurve";
+});
+
+document.getElementById("circle").addEventListener("click", function(event){
+  penType = "circle";
 });
