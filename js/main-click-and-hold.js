@@ -1,6 +1,7 @@
 //main click listener
 document.getElementById("beerPong").addEventListener("click", function(event){
 
+
   if(JSON.parse(event.target.id) instanceof Array){
 
     switch(penType){
