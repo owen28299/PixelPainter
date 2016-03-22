@@ -25,12 +25,28 @@ function drawCurve(coord1, coord2, coord3){
   a = (B - (b * C)) / D;
   c = y1 - a * (x1 * x1) - b * x1;
 
+  function getY(x){
+    return a * x * x + b * x + c;
+  }
 
-  var y = a * x1 * x1 + b * x1 + c;
+  // function getX(y){
+  //   return ((-b + Math.sqrt(b * b - 4 * a * (c - y))) / 2 * a);
+  // }
 
-  for (var x = x1; x <= x3; x++){
-    var pointx = JSON.stringify([x, Math.round(a * x * x + b * x + c)]);
+  var start = Math.min(x1, x2, x3);
+  var end = Math.max(x1, x2, x3);
+
+  for (var x = start; x <= end; x++){
+    var pointx = JSON.stringify([x, Math.round(getY(x))]);
     document.getElementById(pointx).style.background = color;
   }
+
+  // for (var y = y1; y <= y2; y++){
+  //   console.log('y', y);
+  //   console.log('getX(y)', getX(y));
+
+  //   var pointy = JSON.stringify([Math.round(getX(y)), y]);
+  //   document.getElementById(pointy).style.background = color;
+  // }
 
 }
