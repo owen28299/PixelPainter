@@ -72,3 +72,7 @@ document.getElementById("hcurve").addEventListener("click", function(event){
 document.getElementById("circle").addEventListener("click", function(event){
   penType = "circle";
 });
+
+document.getElementById("triangle").addEventListener("click", function(event){
+  penType = "triangle";
+});
