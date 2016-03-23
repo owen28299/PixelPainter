@@ -25,13 +25,19 @@ document.getElementById('colors').addEventListener('click', function(event){
 
 //turns on the mouseDown
 document.getElementById("beerPong").addEventListener("mousedown", function(event){
-  // natsColor();
-  mouseIsDown = true;
+
+  if(event.target.id !== "beerPong"){
+    mouseIsDown = true;
+  }
+
+});
+
+document.getElementById("beerPong").addEventListener("drag", function(){
+  console.log("mouse is up");
 });
 
 //turns off the mouseDown
-document.getElementById("body").addEventListener("mouseup", function(event){
-  // natsColor();
+document.addEventListener("mouseup", function(event){
   mouseIsDown = false;
 });
 

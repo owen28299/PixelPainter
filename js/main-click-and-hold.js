@@ -1,6 +1,12 @@
 //main click listener
 document.getElementById("beerPong").addEventListener("click", function(event){
 
+  try {
+    JSON.parse(event.target.id);
+  } catch (error) {
+    mouseIsDown = false;
+    return;
+  }
 
   if(JSON.parse(event.target.id) instanceof Array){
 
@@ -138,4 +144,7 @@ document.getElementById("beerPong").addEventListener("mouseover", function(event
         break;
     }
   }
+
+
+
 });
