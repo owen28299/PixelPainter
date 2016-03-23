@@ -30,7 +30,6 @@ document.getElementById("lastColorBlock").addEventListener('click', function(eve
 
 //turns on the mouseDown
 document.getElementById("beerPong").addEventListener("mousedown", function(event){
-
   if(event.target.id !== "beerPong"){
     mouseIsDown = true;
   }

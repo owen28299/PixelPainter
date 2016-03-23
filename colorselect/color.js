@@ -2,6 +2,7 @@
 
 function colorGen(){
 
+	//creates an html input color picker
 	var input = document.createElement('input');
 	input.type = 'color';
 	input.value = '#33cccc';
@@ -10,9 +11,11 @@ function colorGen(){
 	input.style.width = '100px';
 	input.style.height = '28px';
 
+	//creates last colors selected bank
 	var count = 0;
 
 	input.onchange = function() {
+	 var parent = document.getElementById('lastColorBlock');
 	 var child = document.getElementById('lastColorBlock').children;
 	 var value= input.value;
 	 if(child.length <= 7){
@@ -26,9 +29,13 @@ function colorGen(){
 	} else {
 
 			if(count <= 7){
-				child[count].style.background= value;
+				var newColor= document.createElement('div');
+	    		newColor.className = 'lastColor';
+	    		newColor.id= value;
+	    		newColor.style.background = value;    		
+				parent.insertBefore(newColor, child[0]);
+				parent.removeChild(child[count]);
 				count++;
-				console.log('the count is: ', count);
 			}
 				else
 				{
