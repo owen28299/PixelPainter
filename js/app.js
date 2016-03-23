@@ -1,4 +1,4 @@
-var color;
+var color = "black";
 var mouseIsDown = false;
 var penType = "normal";
 var clicks = [0,"","", ""];
@@ -47,38 +47,7 @@ document.getElementById('clear').addEventListener("click", function(){
   clearCanvas();
 });
 
-//plus button
-document.getElementById("plus").addEventListener("click", function(event){
-  penType = "plus";
-});
-
-//basic button
-document.getElementById("normal").addEventListener("click", function(event){
-  penType = "normal";
-});
-
-//line button
-document.getElementById("line").addEventListener("click", function(event){
-  penType = "line";
-});
-
-//square button
-document.getElementById("square").addEventListener("click", function(event){
-  penType = "square";
-});
-
-document.getElementById("curve").addEventListener("click", function(event){
-  penType = "curve";
-});
-
-document.getElementById("hcurve").addEventListener("click", function(event){
-  penType = "hcurve";
-});
-
-document.getElementById("circle").addEventListener("click", function(event){
-  penType = "circle";
-});
-
-document.getElementById("triangle").addEventListener("click", function(event){
-  penType = "triangle";
+document.getElementById('holder').addEventListener("click", function(event){
+  event.stopPropagation();
+  penType = event.target.id;
 });

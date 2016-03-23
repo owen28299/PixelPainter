@@ -19,6 +19,10 @@ document.getElementById("beerPong").addEventListener("click", function(event){
         clicks = [0, "", "", ""];
         drawPlus(event.target.id);
         break;
+      case("fill"):
+        fill(event.target.id);
+        event.target.style.background = color;
+        break;
       case("line"):
 
         if(clicks[0] === 0){
