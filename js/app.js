@@ -1,4 +1,4 @@
-var color;
+var color = "black";
 var mouseIsDown = false;
 var penType = "normal";
 var clicks = [0,"","", ""];
@@ -22,16 +22,28 @@ document.getElementById('colors').addEventListener('click', function(event){
    color = event.target.id;
 });
 
+document.getElementById("lastColorBlock").addEventListener('click', function(event){
+   console.log(event.target);
+   color = event.target.style.background;
+});
+
 
 //turns on the mouseDown
 document.getElementById("beerPong").addEventListener("mousedown", function(event){
-  // natsColor();
-  mouseIsDown = true;
+
+  if(event.target.id !== "beerPong"){
+    mouseIsDown = true;
+  }
+
+});
+
+//drag now invokes mouse up
+document.getElementById("beerPong").addEventListener("drag", function(){
+  console.log("mouse is up");
 });
 
 //turns off the mouseDown
-document.getElementById("body").addEventListener("mouseup", function(event){
-  // natsColor();
+document.addEventListener("mouseup", function(event){
   mouseIsDown = false;
 });
 
@@ -41,34 +53,7 @@ document.getElementById('clear').addEventListener("click", function(){
   clearCanvas();
 });
 
-//plus button
-document.getElementById("plus").addEventListener("click", function(event){
-  penType = "plus";
-});
-
-//basic button
-document.getElementById("normal").addEventListener("click", function(event){
-  penType = "normal";
-});
-
-//line button
-document.getElementById("line").addEventListener("click", function(event){
-  penType = "line";
-});
-
-//square button
-document.getElementById("square").addEventListener("click", function(event){
-  penType = "square";
-});
-
-document.getElementById("curve").addEventListener("click", function(event){
-  penType = "curve";
-});
-
-document.getElementById("hcurve").addEventListener("click", function(event){
-  penType = "hcurve";
-});
-
-document.getElementById("circle").addEventListener("click", function(event){
-  penType = "circle";
+document.getElementById('holder').addEventListener("click", function(event){
+  event.stopPropagation();
+  penType = event.target.id;
 });

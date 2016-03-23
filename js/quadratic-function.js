@@ -62,7 +62,7 @@ function drawCurve(coord1, coord2, coord3){
     for (var check = start; check < end; check++){
       var xcheck = getY(check);
 
-      if ( Math.abs((y - xcheck)) < Math.abs(1.49) &&
+      if ( Math.abs((y - xcheck)) < Math.abs(0.9) &&
         Math.abs((y - endy)) > Math.abs(5)){
 
         pointy = JSON.stringify([Math.round(check) ,y]);

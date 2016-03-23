@@ -24,7 +24,7 @@ function colorGen(){
 	    document.getElementById('lastColorBlock').appendChild(lastColor);
 	    console.log(document.getElementById('lastColorBlock').children);
 	} else {
-		
+
 			if(count <= 7){
 				child[count].style.background= value;
 				count++;

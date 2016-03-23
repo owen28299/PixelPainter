@@ -1,6 +1,12 @@
 //main click listener
 document.getElementById("beerPong").addEventListener("click", function(event){
 
+  try {
+    JSON.parse(event.target.id);
+  } catch (error) {
+    mouseIsDown = false;
+    return;
+  }
 
   if(JSON.parse(event.target.id) instanceof Array){
 
@@ -12,6 +18,10 @@ document.getElementById("beerPong").addEventListener("click", function(event){
       case("plus"):
         clicks = [0, "", "", ""];
         drawPlus(event.target.id);
+        break;
+      case("fill"):
+        fill(event.target.id);
+        event.target.style.background = color;
         break;
       case("line"):
 
@@ -85,6 +95,26 @@ document.getElementById("beerPong").addEventListener("click", function(event){
           clicks = [0, "", "", ""];
         }
         break;
+      case("triangle"):
+
+        if(clicks[0] === 0){
+          event.target.style.background = color;
+          clicks[1] = event.target.id;
+          clicks[0] ++;
+        }
+
+        else if(clicks[0] === 1){
+          clicks[2] = event.target.id;
+          clicks[0] ++;
+          event.target.style.background = color;
+        }
+        else if (clicks[0] === 2) {
+          clicks[3] = event.target.id;
+          event.target.style.background = color;
+          drawTriangle(clicks[1], clicks[2], clicks[3]);
+          clicks = [0, "", "", ""];
+        }
+        break;
       case("circle"):
 
         if(clicks[0] === 0){
@@ -118,4 +148,7 @@ document.getElementById("beerPong").addEventListener("mouseover", function(event
         break;
     }
   }
+
+
+
 });

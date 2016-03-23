@@ -1,28 +1,29 @@
 <html>
   <head>
+
     <link href="css/PixelPainter.css" rel="stylesheet" media="screen" />
   </head>
-  <body id="body">
+  <body id="body" ondragstart="return false;" ondrop="return false;">
     <h1>Pixel Painter</h1>
-    
-    <br>
-    <br>
-    
-    <div id="border_main">
-      <table id='beerPong'></table>
-    </div>
-    
+
     <br>
     <br>
 
-    <div id= "colorpicker"></div>    
+    <div id="border_main">
+      <table id='beerPong' draggable="false"></table>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="colorpicker"></div>
     <br>
 
     <table class= "colorpick">
       <tr id= "colors"></tr>
     </table>
-    
-    <div id= "lastColorBlock"></div> 
+
+    <div id= "lastColorBlock"></div>
 
     <br>
     <br>
@@ -36,22 +37,24 @@
         <button class="button" id="curve">Curve</button>
         <button class="button" id="hcurve">H-Curve</button>
         <button class="button" id="circle">Circle</button>
+        <button class="button" id="fill">Fill</button>
+      </div>
+
     </div>
-
-
 
     <script type="text/javascript" src="./colorselect/color.js"></script>
 
-
-
     <script src="js/PixelPainter.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/proxy-getters.js"></script>
     <script type="text/javascript" src="./js/plus-pen.js"></script>
     <script type="text/javascript" src="./js/line-function.js"></script>
     <script type="text/javascript" src="./js/square-function.js"></script>
     <script type="text/javascript" src="./js/quadratic-function.js"></script>
     <script type="text/javascript" src="./js/H-quadratic-function.js"></script>
     <script type="text/javascript" src="./js/circle-function.js"></script>
+    <script type="text/javascript" src="./js/triangle-function.js"></script>
+    <script type="text/javascript" src="./js/fill.js"></script>
     <script type="text/javascript" src="./js/main-click-and-hold.js"></script>
 
 
