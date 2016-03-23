@@ -19,22 +19,40 @@ h1 {
 }
 
 table {
-  border: 1px;
-  border-radius: 5px;
   background:#7f7f7f;
   background:rgba(0,0,0,0.5);
   padding: 5px;
-}
-
-input{
-  height: 28px;
-  width: 100px;
+  position: relative;
 }
 
 #colors td {
   width: 25px;
   height: 25px;
   border-radius: 10px;
+}
+
+
+#lastColorBlock{
+  width: 300px;
+  display: inline-block;
+  position: relative;
+  border: 1px;
+  background:#7f7f7f;
+  background:rgba(0,0,0,0.5);
+  padding: 5px;
+}
+
+#lastColorBlock .lastColor{
+  display: inline-block;
+  border-radius: 10px;
+  height: 26px;
+  width: 26px;
+  margin-left: 2px;
+}
+
+#holder{
+  width: 300px;
+  display: inline-block;
 }
 
 
@@ -51,7 +69,7 @@ input{
 	display:inline-block;
 	justify-content: center;
 	text-decoration:none;
-	margin: 0 auto;
+	margin: 5 auto;
 	border-radius:5px;
 	border:solid 1px #D94E3B;
 	background:#cb3b27;
