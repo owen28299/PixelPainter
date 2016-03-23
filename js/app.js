@@ -22,6 +22,11 @@ document.getElementById('colors').addEventListener('click', function(event){
    color = event.target.id;
 });
 
+document.getElementById("lastColorBlock").addEventListener('click', function(event){
+   console.log(event.target);
+   color = event.target.style.background;
+});
+
 
 //turns on the mouseDown
 document.getElementById("beerPong").addEventListener("mousedown", function(event){
@@ -32,6 +37,7 @@ document.getElementById("beerPong").addEventListener("mousedown", function(event
 
 });
 
+//drag now invokes mouse up
 document.getElementById("beerPong").addEventListener("drag", function(){
   console.log("mouse is up");
 });
