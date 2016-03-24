@@ -23,10 +23,12 @@ clearCanvas();
 //Colour Selector
 document.getElementById('colors').addEventListener('click', function(event){
   color = event.target.style.background;
+  document.getElementById('currentColor').value = event.target.id;
 });
 
 document.getElementById("lastColorBlock").addEventListener('click', function(event){
   color = event.target.style.background;
+  document.getElementById('currentColor').value = event.target.value;
 });
 
 

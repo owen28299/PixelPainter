@@ -5,44 +5,51 @@ function colorGen(){
 	//creates an html input color picker
 	var input = document.createElement('input');
 	input.type = 'color';
-	input.value = '#33cccc';
+	input.value = '#000000';
+  input.id = 'currentColor';
 
 	document.getElementById('colorpicker').appendChild(input);
 	input.style.width = '100px';
 	input.style.height = '28px';
 
 	//creates last colors selected bank
-	var count = 0;
+	var blocks = 0;
+  var modulolimit = 8;
 
 	input.onchange = function() {
-	 var parent = document.getElementById('lastColorBlock');
 	 var child = document.getElementById('lastColorBlock').children;
-	 var value= input.value;
-	 if(child.length <= 7){
-	    var lastColor= document.createElement('div');
+	 var value = input.value;
+
+   color = value;
+
+	 if(child.length <= modulolimit - 1){
+
+      var lastColor= document.createElement('div');
 	    lastColor.className = 'lastColor';
-	    lastColor.id= value;
+	    lastColor.id = "q" + (blocks % modulolimit);
 	    lastColor.style.background = value;
-	    console.log(lastColor.id);
-	    document.getElementById('lastColorBlock').appendChild(lastColor);
-	    console.log(document.getElementById('lastColorBlock').children);
-	} else {
+      lastColor.value = value;
 
-			if(count <= 7){
-				var newColor= document.createElement('div');
-	    		newColor.className = 'lastColor';
-	    		newColor.id= value;
-	    		newColor.style.background = value;    		
-				parent.insertBefore(newColor, child[0]);
-				parent.removeChild(child[count]);
-				count++;
-			}
-				else
-				{
-					count = 0;
-				}
+      if (blocks === 0){
+	     document.getElementById('lastColorBlock').appendChild(lastColor);
+      }
 
-			}
+      else {
+       document.getElementById('lastColorBlock').insertBefore(lastColor, child[0]);
+      }
+
+      blocks++;
+	}
+
+  else {
+
+    for (var i = 0; i <= (modulolimit - 2); i++){
+      document.getElementById("q" + i).style.background = document.getElementById("q" + (i + 1)).style.background;
+    }
+
+    document.getElementById("q" + (modulolimit - 1) ).style.background = value;
+
+	}
 
 		};
 	}

@@ -30,10 +30,6 @@ function fill(coord){
 
   baseComponents = rgbToHex(Number(baseComponents[0]), Number(baseComponents[1]), Number(baseComponents[2]));
 
-  console.log('baseComponents', baseComponents);
-  console.log('color', color);
-  console.log('base', base);
-
   if(baseComponents === color){
     return;
   }
