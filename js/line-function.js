@@ -9,6 +9,15 @@ function drawLine(coord1, coord2){
   }
 
   var slope = (p2[1] - p1[1]) / (p2[0] - p1[0]);
+
+  if(slope === Infinity){
+    slope = 9999999999;
+  }
+
+  if(slope === -Infinity){
+    slope = -9999999999;
+  }
+
   var yint = p1[1] - slope * p1[0];
 
   for (var x = p1[0]; x < p2[0]; x++){

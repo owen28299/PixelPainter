@@ -42,7 +42,7 @@ document.getElementById("beerPong").addEventListener("click", function(event){
       case("square"):
 
         if(clicks[0] === 0){
-          oldColor = event.target.style.background;
+          // oldColor = event.target.style.background;
           event.target.style.background = color;
           clicks[1] = event.target.id;
           clicks[0] ++;
