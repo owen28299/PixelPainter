@@ -24,7 +24,6 @@ function makeCanvas(r, c){
       col.id = colorArr[i];
       col.style.background= colorArr[i];
       document.getElementById('colors').appendChild(col);
-
     }
   }
 

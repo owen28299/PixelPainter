@@ -67,8 +67,6 @@ function drawHCurve(coord1, coord2, coord3){
 
         pointy = JSON.stringify([y, Math.round(check)]);
 
-
-
         if(document.getElementById(getAbove(pointy)).style.background === "white" &&
         document.getElementById(getBelow(pointy)).style.background === "white") {
             if(endy - starty > end - start) {

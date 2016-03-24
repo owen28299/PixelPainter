@@ -2,6 +2,7 @@ var color = "black";
 var mouseIsDown = false;
 var penType = "normal";
 var clicks = [0,"","", ""];
+var oldColor = "white";
 
 function clearCanvas() {
   var allCanvas  = document.querySelectorAll(".cell");
@@ -11,6 +12,8 @@ function clearCanvas() {
   });
 
   clicks = [0, "", "", ""];
+
+  oldColor = "white";
 }
 
 //start with a blank canvas
@@ -19,12 +22,11 @@ clearCanvas();
 
 //Colour Selector
 document.getElementById('colors').addEventListener('click', function(event){
-   color = event.target.id;
+  color = event.target.style.background;
 });
 
 document.getElementById("lastColorBlock").addEventListener('click', function(event){
-   console.log(event.target);
-   color = event.target.style.background;
+  color = event.target.style.background;
 });
 
 
@@ -39,7 +41,7 @@ document.getElementById("beerPong").addEventListener("mousedown", function(event
 
 //drag now invokes mouse up
 document.getElementById("beerPong").addEventListener("drag", function(){
-  console.log("mouse is up");
+  mouseIsDown = false;
 });
 
 //turns off the mouseDown

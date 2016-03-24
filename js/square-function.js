@@ -3,8 +3,8 @@ function drawSquare(coord1, coord2){
   var p1 = JSON.parse(coord1);
   var p2 = JSON.parse(coord2);
 
-  document.getElementById(coord1).style.background = "white";
-  document.getElementById(coord2).style.background = "white";
+  document.getElementById(coord1).style.background = oldColor;
+  document.getElementById(coord2).style.background = oldColor;
 
 
   if(p1[1] > p2[1]){

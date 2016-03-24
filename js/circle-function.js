@@ -1,4 +1,7 @@
 function drawCircle(coord1, coord2){
+
+  document.getElementById(coord1).style.background = oldColor;
+
   var p1 = JSON.parse(coord1);
   var p2 = JSON.parse(coord2);
 
@@ -50,6 +53,6 @@ function drawCircle(coord1, coord2){
   }
 
 
-  document.getElementById(JSON.stringify(p1)).style.background = "white";
+
 
 }

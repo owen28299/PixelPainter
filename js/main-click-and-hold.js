@@ -42,6 +42,7 @@ document.getElementById("beerPong").addEventListener("click", function(event){
       case("square"):
 
         if(clicks[0] === 0){
+          oldColor = event.target.style.background;
           event.target.style.background = color;
           clicks[1] = event.target.id;
           clicks[0] ++;
@@ -50,7 +51,6 @@ document.getElementById("beerPong").addEventListener("click", function(event){
         else if(clicks[0] === 1){
           clicks[2] = event.target.id;
           clicks[0] ++;
-
           drawSquare(clicks[1], clicks[2]);
           clicks = [0, "", "", ""];
         }
@@ -118,6 +118,7 @@ document.getElementById("beerPong").addEventListener("click", function(event){
       case("circle"):
 
         if(clicks[0] === 0){
+          oldColor = event.target.style.background;
           event.target.style.background = color;
           clicks[1] = event.target.id;
           clicks[0] ++;
