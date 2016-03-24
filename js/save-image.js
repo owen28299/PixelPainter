@@ -1,10 +1,12 @@
 document.getElementById("save").addEventListener("click", function(){
 
-  var canvas = document.getElementById("beerPong");
+  console.log('coming soon');
 
-  var img = canvas.toDataURL("image/png");
+  // var canvas = document.getElementById("beerPong");
 
-  document.write('<img src=' + img + "/>");
+  // var img = canvas.toDataURL("image/png");
+
+  // document.write('<img src=' + img + "/>");
 
 });
 
