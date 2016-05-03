@@ -6,7 +6,7 @@ document.getElementById("load").addEventListener("click", function() {
 
   var loadReq = new XMLHttpRequest();
   loadReq.addEventListener('load', renderSavedImage);
-  loadReq.open("GET", "/load/" + imageName);
+  loadReq.open("GET", "/image/load/" + imageName);
   loadReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   loadReq.send();
 

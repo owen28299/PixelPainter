@@ -20,7 +20,7 @@ document.getElementById("save").addEventListener("click", function(){
       console.log(data);
     });
 
-    saveReq.open("POST", "/save");
+    saveReq.open("POST", "/image/save");
     saveReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     saveReq.send("imagestate=" + JSON.stringify(imageState) + "&name=" + name);
   });
