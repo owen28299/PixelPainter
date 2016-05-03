@@ -13,7 +13,9 @@ document.getElementById("load").addEventListener("click", function() {
 });
 
 function renderSavedImage(data){
-  var image = JSON.parse(data.target.responseText);
+  var response = JSON.parse(data.target.responseText);
+
+  var image = JSON.parse(response.imagestate);
 
   for (var coord in image){
     document.getElementById(coord).style.background = image[coord];
