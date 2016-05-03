@@ -2,11 +2,13 @@
 
 document.getElementById("load").addEventListener("click", function() {
 
-  var saveReq = new XMLHttpRequest();
-  saveReq.addEventListener('load', renderSavedImage);
+  var imageName = document.getElementById('loadas').value;
 
-  saveReq.open("GET", "/load");
-  saveReq.send();
+  var loadReq = new XMLHttpRequest();
+  loadReq.addEventListener('load', renderSavedImage);
+  loadReq.open("GET", "/load/" + imageName);
+  loadReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  loadReq.send();
 
 });
 

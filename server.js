@@ -12,13 +12,14 @@ app.use(express.static('public'));
 
 var image = {};
 
-app.get("/load", function(req,res){
-  res.send(image);
+app.get("/load/:name", function(req,res){
+  var name = req.params.name;
+  res.send(image[name]);
 });
 
 app.post("/save", function(req,res){
-  image = req.body;
-  res.send("success: true");
+  image[req.body.name] = req.body.imagestate;
+  res.send(image);
 });
 
 app.listen(3000, function(){

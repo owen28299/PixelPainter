@@ -4,6 +4,19 @@ body {
   background-attachment: fixed;
 }
 
+p {
+  color: white;
+  font-size: 18px;
+  margin: 0px;
+}
+
+#saveandload {
+  background-color: hsla(200,100%,5%,0.4);
+  padding-left: 10px;
+  padding-top: 1px;
+  margin-top: 5px;
+}
+
 h1 {
 	height: 80px;
 	text-align: center;

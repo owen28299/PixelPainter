@@ -9,18 +9,20 @@ document.getElementById("save").addEventListener("click", function(){
       imageState[element.id] = element.style.background;
     });
 
-    callback(imageState);
+    var name = document.getElementById('saveas').value;
+
+    callback(imageState, name);
   }
 
-  saveImage(function(imageState){
+  saveImage(function(imageState, name){
     var saveReq = new XMLHttpRequest();
     saveReq.addEventListener('load', function(data){
       console.log(data);
     });
 
     saveReq.open("POST", "/save");
-    saveReq.setRequestHeader("Content-Type", "application/json");
-    saveReq.send(JSON.stringify(imageState));
+    saveReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    saveReq.send("imagestate=" + JSON.stringify(imageState) + "&name=" + name);
   });
 
 });
