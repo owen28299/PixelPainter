@@ -6,9 +6,6 @@ function fill(coord){
 
   var base = document.getElementById(coord).style.background;
 
-  console.log('base', base);
-  console.log('color', color);
-
   var baseComponents = base.split("");
   baseComponents.shift();
   baseComponents.shift();
