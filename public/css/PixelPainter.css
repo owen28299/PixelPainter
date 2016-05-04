@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
 body {
-	background-image: url("../images/colorblocks.jpg");
+	background-image: url("../images/asanoha-400px.png");
 	background-size: cover;
   background-attachment: fixed;
+  font-family: 'VT323';
 }
 
 p {
@@ -17,12 +20,16 @@ p {
   margin-top: 5px;
 }
 
+option, select, input, button {
+  font-family: 'VT323';
+}
+
 h1 {
 	height: 80px;
 	text-align: center;
 	color: white;
-	font-family: georgia;
-  font-size: 300%;
+	font-family: 'VT323';
+  font-size: 450%;
 	margin-top: 65px;
   border: 1px;
   border-radius: 5px;
@@ -52,7 +59,11 @@ table {
   border: 1px;
   background:#7f7f7f;
   background:rgba(0,0,0,0.5);
-  padding: 5px;
+}
+
+.lastColor {
+  margin-left: 7px;
+  margin-bottom: 5px;
 }
 
 #lastColorBlock .lastColor{
@@ -60,7 +71,6 @@ table {
   border-radius: 10px;
   height: 26px;
   width: 26px;
-  margin-left: 2px;
 }
 
 #holder{

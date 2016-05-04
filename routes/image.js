@@ -34,6 +34,17 @@ router.route('/load/:name')
   });
 });
 
+router.route('/loadall')
+  .get(function(req,res){
+  Image.find(function(err,images){
+    if(err) {
+      res.send(err);
+    }
+    else {
+      res.send(images);
+    }
+  });
+});
 
 
 module.exports = router;

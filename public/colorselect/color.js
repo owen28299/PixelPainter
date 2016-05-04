@@ -14,7 +14,7 @@ function colorGen(){
 
 	//creates last colors selected bank
 	var blocks = 0;
-  var modulolimit = 8;
+  var modulolimit = 7;
 
 	input.onchange = function() {
 	 var child = document.getElementById('lastColorBlock').children;

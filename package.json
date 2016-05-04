@@ -19,6 +19,8 @@
   "homepage": "https://github.com/owen28299/PixelPainter#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
     "mongoose": "^4.4.14"
   }
 }
