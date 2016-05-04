@@ -3,8 +3,11 @@
 const express    = require('express'),
       app        = express(),
       bodyParser = require('body-parser'),
-      imageRoute = require('./routes/image')
+      imageRoute = require('./routes/image'),
+      mongoose   = require('./mongoose')
       ;
+
+mongoose();
 
 app
   .use(bodyParser.json({limit: '50mb'}))
